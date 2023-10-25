@@ -10,13 +10,13 @@ spec:
       inputs:
         parameters:
           - name: VPC_ID
-            value: AWS_VPC_ID
+            value: vpc-0e0df4f958ac443ba
           - name: AWS_REGION
-            value: REGION_AWS
+            value: us-east-1
           - name: CLUSTER_IAM_ROLE_NAME
-            value: AWS_CLUSTER_IAM_ROLE_NAME
+            value: eks-upgrades-workshop-cluster-20231024224651929600000006
           - name: CLUSTER_SG_ID
-            value: CLUSTER_SECURITY_GROUP_ID
+            value: sg-02bd01b1bbac9dfe7
       container:
         image: public.ecr.aws/i9m4f0j6/eks-validate-image:9
         command: ["/bin/sh","-c"]
@@ -67,7 +67,7 @@ spec:
           - name: CLUSTER_NAME
             value: eks-upgrades-workshop
           - name: AWS_REGION
-            value: REGION_AWS
+            value: us-east-1
       container:
         image: public.ecr.aws/i9m4f0j6/eks-validate-image:9
         command: ["/bin/sh","-c"]
